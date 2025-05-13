@@ -37,34 +37,37 @@
             textBox3 = new TextBox();
             btnPagamentoPedido = new Button();
             lbValorPedido = new ListBox();
+            btnStatusPedidos = new Button();
             SuspendLayout();
             // 
             // lbItens
             // 
             lbItens.BackColor = Color.White;
             lbItens.BorderStyle = BorderStyle.None;
+            lbItens.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbItens.FormattingEnabled = true;
-            lbItens.ItemHeight = 15;
+            lbItens.ItemHeight = 20;
             lbItens.Location = new Point(198, 149);
             lbItens.Name = "lbItens";
-            lbItens.Size = new Size(277, 405);
+            lbItens.Size = new Size(277, 380);
             lbItens.TabIndex = 0;
             // 
             // lbCarrinhoCliente
             // 
             lbCarrinhoCliente.BackColor = Color.White;
             lbCarrinhoCliente.BorderStyle = BorderStyle.None;
+            lbCarrinhoCliente.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbCarrinhoCliente.FormattingEnabled = true;
-            lbCarrinhoCliente.ItemHeight = 15;
+            lbCarrinhoCliente.ItemHeight = 20;
             lbCarrinhoCliente.Location = new Point(706, 149);
             lbCarrinhoCliente.Name = "lbCarrinhoCliente";
-            lbCarrinhoCliente.Size = new Size(277, 405);
+            lbCarrinhoCliente.Size = new Size(277, 400);
             lbCarrinhoCliente.TabIndex = 1;
             lbCarrinhoCliente.SelectedIndexChanged += listBox2_SelectedIndexChanged;
             // 
             // btnAdicionar
             // 
-            btnAdicionar.BackColor = Color.FromArgb(255, 255, 128);
+            btnAdicionar.BackColor = Color.Yellow;
             btnAdicionar.FlatStyle = FlatStyle.Flat;
             btnAdicionar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAdicionar.ForeColor = Color.Black;
@@ -74,6 +77,7 @@
             btnAdicionar.TabIndex = 2;
             btnAdicionar.Text = "Adicionar ->";
             btnAdicionar.UseVisualStyleBackColor = false;
+            btnAdicionar.Click += btnAdicionar_Click;
             // 
             // btnRemover
             // 
@@ -107,7 +111,7 @@
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(266, 131);
+            textBox2.Location = new Point(273, 121);
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(125, 22);
@@ -120,7 +124,7 @@
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox3.ForeColor = Color.Black;
-            textBox3.Location = new Point(774, 131);
+            textBox3.Location = new Point(776, 121);
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
             textBox3.Size = new Size(150, 22);
@@ -129,11 +133,11 @@
             // 
             // btnPagamentoPedido
             // 
-            btnPagamentoPedido.BackColor = Color.FromArgb(255, 255, 128);
+            btnPagamentoPedido.BackColor = Color.Yellow;
             btnPagamentoPedido.FlatStyle = FlatStyle.Flat;
             btnPagamentoPedido.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPagamentoPedido.ForeColor = Color.Black;
-            btnPagamentoPedido.Location = new Point(1042, 320);
+            btnPagamentoPedido.Location = new Point(1046, 338);
             btnPagamentoPedido.Name = "btnPagamentoPedido";
             btnPagamentoPedido.Size = new Size(149, 29);
             btnPagamentoPedido.TabIndex = 14;
@@ -153,6 +157,20 @@
             lbValorPedido.Size = new Size(277, 63);
             lbValorPedido.TabIndex = 15;
             // 
+            // btnStatusPedidos
+            // 
+            btnStatusPedidos.BackColor = Color.Yellow;
+            btnStatusPedidos.FlatStyle = FlatStyle.Flat;
+            btnStatusPedidos.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnStatusPedidos.ForeColor = Color.Black;
+            btnStatusPedidos.Location = new Point(1141, 12);
+            btnStatusPedidos.Name = "btnStatusPedidos";
+            btnStatusPedidos.Size = new Size(143, 30);
+            btnStatusPedidos.TabIndex = 16;
+            btnStatusPedidos.Text = "Ver status dos pedidos";
+            btnStatusPedidos.UseVisualStyleBackColor = false;
+            btnStatusPedidos.Click += btnStatusPedidos_Click;
+            // 
             // FormCaixa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -160,6 +178,7 @@
             BackColor = Color.FromArgb(255, 255, 192);
             BackgroundImage = Properties.Resources.Inspirational_Gradient_Desktop_Background;
             ClientSize = new Size(1296, 714);
+            Controls.Add(btnStatusPedidos);
             Controls.Add(lbValorPedido);
             Controls.Add(btnPagamentoPedido);
             Controls.Add(textBox3);
@@ -187,5 +206,6 @@
         private TextBox textBox3;
         private Button btnPagamentoPedido;
         private ListBox lbValorPedido;
+        private Button btnStatusPedidos;
     }
 }

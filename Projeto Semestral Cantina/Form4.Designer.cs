@@ -35,10 +35,10 @@
             // 
             // btnEnviar
             // 
-            btnEnviar.BackColor = Color.FromArgb(255, 255, 128);
+            btnEnviar.BackColor = Color.Yellow;
             btnEnviar.FlatStyle = FlatStyle.Flat;
             btnEnviar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEnviar.Location = new Point(242, 193);
+            btnEnviar.Location = new Point(244, 173);
             btnEnviar.Name = "btnEnviar";
             btnEnviar.Size = new Size(167, 23);
             btnEnviar.TabIndex = 16;
@@ -48,7 +48,7 @@
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.FromArgb(255, 255, 128);
+            textBox1.BackColor = Color.Yellow;
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.ForeColor = Color.Black;
@@ -69,13 +69,14 @@
             btnRetornar3.TabIndex = 18;
             btnRetornar3.Text = "Retornar";
             btnRetornar3.UseVisualStyleBackColor = false;
+            btnRetornar3.Click += btnRetornar3_Click;
             // 
             // FormFinalizandoPagamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Inspirational_Gradient_Desktop_Background;
-            ClientSize = new Size(648, 404);
+            ClientSize = new Size(647, 336);
             Controls.Add(btnRetornar3);
             Controls.Add(textBox1);
             Controls.Add(btnEnviar);

@@ -31,5 +31,21 @@ namespace Projeto_Semestral_Cantina
         {
 
         }
+
+        private void lbMostrarPedido_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRetornar2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnEscolherPagamento_Click(object sender, EventArgs e)
+        {
+            FormFinalizandoPagamento formFinalizandoPagamento = new FormFinalizandoPagamento();
+            formFinalizandoPagamento.ShowDialog();
+        }
     }
 }

@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Projeto_Semestral_Cantina
 {
-    public partial class FormVisualizarPedidos : Form
+    public partial class FormVisualizarStatus : Form
     {
-        public FormVisualizarPedidos()
+        public FormVisualizarStatus()
         {
             InitializeComponent();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRetornar4_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

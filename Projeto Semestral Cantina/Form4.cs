@@ -19,7 +19,12 @@ namespace Projeto_Semestral_Cantina
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Pedido enviado para a cozinha!");
+        }
 
+        private void btnRetornar3_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
