@@ -31,6 +31,12 @@
             btnEnviar = new Button();
             textBox1 = new TextBox();
             btnRetornar3 = new Button();
+            panel2 = new Panel();
+            btnRetornar = new Button();
+            btnStatusPedidos = new Button();
+            pictureBox2 = new PictureBox();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // btnEnviar
@@ -48,7 +54,7 @@
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.Yellow;
+            textBox1.BackColor = Color.White;
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.ForeColor = Color.Black;
@@ -63,7 +69,7 @@
             btnRetornar3.BackColor = Color.Red;
             btnRetornar3.FlatStyle = FlatStyle.Flat;
             btnRetornar3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRetornar3.Location = new Point(12, 12);
+            btnRetornar3.Location = new Point(220, 8);
             btnRetornar3.Name = "btnRetornar3";
             btnRetornar3.Size = new Size(75, 23);
             btnRetornar3.TabIndex = 18;
@@ -71,17 +77,68 @@
             btnRetornar3.UseVisualStyleBackColor = false;
             btnRetornar3.Click += btnRetornar3_Click;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Yellow;
+            panel2.Controls.Add(btnRetornar3);
+            panel2.Controls.Add(btnRetornar);
+            panel2.Controls.Add(btnStatusPedidos);
+            panel2.Location = new Point(-208, -3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1062, 38);
+            panel2.TabIndex = 23;
+            // 
+            // btnRetornar
+            // 
+            btnRetornar.BackColor = Color.Red;
+            btnRetornar.FlatStyle = FlatStyle.Flat;
+            btnRetornar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRetornar.Location = new Point(13, 8);
+            btnRetornar.Name = "btnRetornar";
+            btnRetornar.Size = new Size(96, 30);
+            btnRetornar.TabIndex = 7;
+            btnRetornar.Text = "Voltar ao login";
+            btnRetornar.UseVisualStyleBackColor = false;
+            // 
+            // btnStatusPedidos
+            // 
+            btnStatusPedidos.BackColor = Color.Yellow;
+            btnStatusPedidos.FlatStyle = FlatStyle.Flat;
+            btnStatusPedidos.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnStatusPedidos.ForeColor = Color.Black;
+            btnStatusPedidos.Location = new Point(1164, 8);
+            btnStatusPedidos.Name = "btnStatusPedidos";
+            btnStatusPedidos.Size = new Size(143, 30);
+            btnStatusPedidos.TabIndex = 16;
+            btnStatusPedidos.Text = "Ver status dos pedidos";
+            btnStatusPedidos.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.White;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox2.Image = Properties.Resources.Bolt_2024_pdf__5_;
+            pictureBox2.Location = new Point(-13, 38);
+            pictureBox2.Margin = new Padding(0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(109, 41);
+            pictureBox2.TabIndex = 24;
+            pictureBox2.TabStop = false;
+            // 
             // FormFinalizandoPagamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Inspirational_Gradient_Desktop_Background;
             ClientSize = new Size(647, 336);
-            Controls.Add(btnRetornar3);
+            Controls.Add(pictureBox2);
             Controls.Add(textBox1);
             Controls.Add(btnEnviar);
+            Controls.Add(panel2);
             Name = "FormFinalizandoPagamento";
             Text = "Form4";
+            Load += FormFinalizandoPagamento_Load;
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -91,5 +148,9 @@
         private Button btnEnviar;
         private TextBox textBox1;
         private Button btnRetornar3;
+        private Panel panel2;
+        private Button btnRetornar;
+        private Button btnStatusPedidos;
+        private PictureBox pictureBox2;
     }
 }

@@ -118,10 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="kiln_of_the_first_flame___dark_souls_iii_by_kinosei10_dg7dbgb-pre" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kiln_of_the_first_flame___dark_souls_iii_by_kinosei10_dg7dbgb-pre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Bolt-2024.pdf-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bolt-2024.pdf-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bolt-2024.pdf (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bolt-2024.pdf (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="erasebg-transformed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\erasebg-transformed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bolt-2024.pdf (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bolt-2024.pdf (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Inspirational Gradient Desktop Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Inspirational Gradient Desktop Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bolt-2024.pdf (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bolt-2024.pdf (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kiln_of_the_first_flame___dark_souls_iii_by_kinosei10_dg7dbgb-pre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kiln_of_the_first_flame___dark_souls_iii_by_kinosei10_dg7dbgb-pre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bolt-2024.pdf (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bolt-2024.pdf (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bolt-2024.pdf (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bolt-2024.pdf (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bolt-2024.pdf (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bolt-2024.pdf (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bolt-2024.pdf (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bolt-2024.pdf (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bolt-2024.pdf (1) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bolt-2024.pdf (1) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bolt-2024.pdf (7) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bolt-2024.pdf (7) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
