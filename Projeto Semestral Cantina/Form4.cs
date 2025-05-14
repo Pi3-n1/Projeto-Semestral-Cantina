@@ -26,5 +26,10 @@ namespace Projeto_Semestral_Cantina
         {
             Close();
         }
+
+        private void FormFinalizandoPagamento_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

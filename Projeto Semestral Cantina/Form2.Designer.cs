@@ -36,6 +36,12 @@
             textBox2 = new TextBox();
             textBox3 = new TextBox();
             btnRetornar2 = new Button();
+            panel2 = new Panel();
+            btnRetornar = new Button();
+            btnStatusPedidos = new Button();
+            pictureBox2 = new PictureBox();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // textBox1
@@ -92,7 +98,7 @@
             lbMostrarPedido.ItemHeight = 15;
             lbMostrarPedido.Location = new Point(69, 192);
             lbMostrarPedido.Name = "lbMostrarPedido";
-            lbMostrarPedido.Size = new Size(265, 139);
+            lbMostrarPedido.Size = new Size(265, 304);
             lbMostrarPedido.TabIndex = 18;
             lbMostrarPedido.SelectedIndexChanged += lbMostrarPedido_SelectedIndexChanged;
             // 
@@ -127,7 +133,7 @@
             btnRetornar2.BackColor = Color.Red;
             btnRetornar2.FlatStyle = FlatStyle.Flat;
             btnRetornar2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRetornar2.Location = new Point(12, 12);
+            btnRetornar2.Location = new Point(280, 8);
             btnRetornar2.Name = "btnRetornar2";
             btnRetornar2.Size = new Size(75, 23);
             btnRetornar2.TabIndex = 21;
@@ -135,13 +141,60 @@
             btnRetornar2.UseVisualStyleBackColor = false;
             btnRetornar2.Click += btnRetornar2_Click;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Yellow;
+            panel2.Controls.Add(btnRetornar2);
+            panel2.Controls.Add(btnRetornar);
+            panel2.Controls.Add(btnStatusPedidos);
+            panel2.Location = new Point(-268, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1062, 35);
+            panel2.TabIndex = 22;
+            // 
+            // btnRetornar
+            // 
+            btnRetornar.BackColor = Color.Red;
+            btnRetornar.FlatStyle = FlatStyle.Flat;
+            btnRetornar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRetornar.Location = new Point(13, 8);
+            btnRetornar.Name = "btnRetornar";
+            btnRetornar.Size = new Size(96, 30);
+            btnRetornar.TabIndex = 7;
+            btnRetornar.Text = "Voltar ao login";
+            btnRetornar.UseVisualStyleBackColor = false;
+            // 
+            // btnStatusPedidos
+            // 
+            btnStatusPedidos.BackColor = Color.Yellow;
+            btnStatusPedidos.FlatStyle = FlatStyle.Flat;
+            btnStatusPedidos.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnStatusPedidos.ForeColor = Color.Black;
+            btnStatusPedidos.Location = new Point(1164, 8);
+            btnStatusPedidos.Name = "btnStatusPedidos";
+            btnStatusPedidos.Size = new Size(143, 30);
+            btnStatusPedidos.TabIndex = 16;
+            btnStatusPedidos.Text = "Ver status dos pedidos";
+            btnStatusPedidos.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.White;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox2.Image = Properties.Resources.Bolt_2024_pdf__5_;
+            pictureBox2.Location = new Point(-13, 35);
+            pictureBox2.Margin = new Padding(0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(109, 41);
+            pictureBox2.TabIndex = 23;
+            pictureBox2.TabStop = false;
+            // 
             // FormPagamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Inspirational_Gradient_Desktop_Background;
             ClientSize = new Size(782, 641);
-            Controls.Add(btnRetornar2);
+            Controls.Add(pictureBox2);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(lbMostrarPedido);
@@ -149,9 +202,12 @@
             Controls.Add(lbFormaPagamento);
             Controls.Add(textBox1);
             Controls.Add(lbCaixaDinheiro);
+            Controls.Add(panel2);
             Name = "FormPagamento";
             Text = "Form2";
             Load += FormPagamento_Load;
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -166,5 +222,9 @@
         private TextBox textBox2;
         private TextBox textBox3;
         private Button btnRetornar2;
+        private Panel panel2;
+        private Button btnRetornar;
+        private Button btnStatusPedidos;
+        private PictureBox pictureBox2;
     }
 }

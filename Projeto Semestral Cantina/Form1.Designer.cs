@@ -36,32 +36,37 @@
             textBox2 = new TextBox();
             textBox3 = new TextBox();
             btnPagamentoPedido = new Button();
-            lbValorPedido = new ListBox();
             btnStatusPedidos = new Button();
+            pictureBox2 = new PictureBox();
+            panel2 = new Panel();
+            lblTotal = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // lbItens
             // 
             lbItens.BackColor = Color.White;
-            lbItens.BorderStyle = BorderStyle.None;
+            lbItens.BorderStyle = BorderStyle.FixedSingle;
             lbItens.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbItens.FormattingEnabled = true;
             lbItens.ItemHeight = 20;
             lbItens.Location = new Point(198, 149);
             lbItens.Name = "lbItens";
-            lbItens.Size = new Size(277, 380);
+            lbItens.Size = new Size(277, 382);
             lbItens.TabIndex = 0;
+            lbItens.SelectedIndexChanged += lbItens_SelectedIndexChanged;
             // 
             // lbCarrinhoCliente
             // 
             lbCarrinhoCliente.BackColor = Color.White;
-            lbCarrinhoCliente.BorderStyle = BorderStyle.None;
+            lbCarrinhoCliente.BorderStyle = BorderStyle.FixedSingle;
             lbCarrinhoCliente.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbCarrinhoCliente.FormattingEnabled = true;
             lbCarrinhoCliente.ItemHeight = 20;
             lbCarrinhoCliente.Location = new Point(706, 149);
             lbCarrinhoCliente.Name = "lbCarrinhoCliente";
-            lbCarrinhoCliente.Size = new Size(277, 400);
+            lbCarrinhoCliente.Size = new Size(277, 382);
             lbCarrinhoCliente.TabIndex = 1;
             lbCarrinhoCliente.SelectedIndexChanged += listBox2_SelectedIndexChanged;
             // 
@@ -91,15 +96,16 @@
             btnRemover.TabIndex = 3;
             btnRemover.Text = "<- Remover";
             btnRemover.UseVisualStyleBackColor = false;
+            btnRemover.Click += btnRemover_Click;
             // 
             // btnRetornar
             // 
             btnRetornar.BackColor = Color.Red;
             btnRetornar.FlatStyle = FlatStyle.Flat;
             btnRetornar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRetornar.Location = new Point(12, 12);
+            btnRetornar.Location = new Point(24, 8);
             btnRetornar.Name = "btnRetornar";
-            btnRetornar.Size = new Size(96, 30);
+            btnRetornar.Size = new Size(106, 30);
             btnRetornar.TabIndex = 7;
             btnRetornar.Text = "Voltar ao login";
             btnRetornar.UseVisualStyleBackColor = false;
@@ -145,25 +151,13 @@
             btnPagamentoPedido.UseVisualStyleBackColor = false;
             btnPagamentoPedido.Click += btnPagamentoPedido_Click;
             // 
-            // lbValorPedido
-            // 
-            lbValorPedido.BorderStyle = BorderStyle.None;
-            lbValorPedido.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbValorPedido.ForeColor = Color.Black;
-            lbValorPedido.FormattingEnabled = true;
-            lbValorPedido.ItemHeight = 21;
-            lbValorPedido.Location = new Point(706, 584);
-            lbValorPedido.Name = "lbValorPedido";
-            lbValorPedido.Size = new Size(277, 63);
-            lbValorPedido.TabIndex = 15;
-            // 
             // btnStatusPedidos
             // 
             btnStatusPedidos.BackColor = Color.Yellow;
             btnStatusPedidos.FlatStyle = FlatStyle.Flat;
             btnStatusPedidos.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnStatusPedidos.ForeColor = Color.Black;
-            btnStatusPedidos.Location = new Point(1141, 12);
+            btnStatusPedidos.Location = new Point(1153, 8);
             btnStatusPedidos.Name = "btnStatusPedidos";
             btnStatusPedidos.Size = new Size(143, 30);
             btnStatusPedidos.TabIndex = 16;
@@ -171,26 +165,61 @@
             btnStatusPedidos.UseVisualStyleBackColor = false;
             btnStatusPedidos.Click += btnStatusPedidos_Click;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.White;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox2.Image = Properties.Resources.Bolt_2024_pdf__5_;
+            pictureBox2.Location = new Point(-12, 47);
+            pictureBox2.Margin = new Padding(0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(109, 41);
+            pictureBox2.TabIndex = 18;
+            pictureBox2.TabStop = false;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Yellow;
+            panel2.Controls.Add(btnRetornar);
+            panel2.Controls.Add(btnStatusPedidos);
+            panel2.Location = new Point(-12, -3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1319, 47);
+            panel2.TabIndex = 20;
+            // 
+            // lblTotal
+            // 
+            lblTotal.AutoSize = true;
+            lblTotal.BackColor = Color.White;
+            lblTotal.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotal.ForeColor = Color.Black;
+            lblTotal.Location = new Point(719, 553);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(100, 40);
+            lblTotal.TabIndex = 21;
+            lblTotal.Text = "label1";
+            // 
             // FormCaixa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 255, 192);
-            BackgroundImage = Properties.Resources.Inspirational_Gradient_Desktop_Background;
+            BackColor = Color.White;
             ClientSize = new Size(1296, 714);
-            Controls.Add(btnStatusPedidos);
-            Controls.Add(lbValorPedido);
+            Controls.Add(lblTotal);
+            Controls.Add(pictureBox2);
             Controls.Add(btnPagamentoPedido);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
-            Controls.Add(btnRetornar);
             Controls.Add(btnRemover);
             Controls.Add(btnAdicionar);
             Controls.Add(lbCarrinhoCliente);
             Controls.Add(lbItens);
+            Controls.Add(panel2);
             Name = "FormCaixa";
             Text = "Form1";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -205,7 +234,9 @@
         private TextBox textBox2;
         private TextBox textBox3;
         private Button btnPagamentoPedido;
-        private ListBox lbValorPedido;
         private Button btnStatusPedidos;
+        private PictureBox pictureBox2;
+        private Panel panel2;
+        private Label lblTotal;
     }
 }

@@ -37,6 +37,11 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             btnRetornar4 = new Button();
+            panel2 = new Panel();
+            btnStatusPedidos = new Button();
+            pictureBox2 = new PictureBox();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // textBox5
@@ -68,12 +73,12 @@
             // lbStatusPreparando
             // 
             lbStatusPreparando.BackColor = Color.White;
-            lbStatusPreparando.BorderStyle = BorderStyle.None;
+            lbStatusPreparando.BorderStyle = BorderStyle.FixedSingle;
             lbStatusPreparando.FormattingEnabled = true;
             lbStatusPreparando.ItemHeight = 15;
             lbStatusPreparando.Location = new Point(12, 154);
             lbStatusPreparando.Name = "lbStatusPreparando";
-            lbStatusPreparando.Size = new Size(182, 405);
+            lbStatusPreparando.Size = new Size(182, 392);
             lbStatusPreparando.TabIndex = 16;
             // 
             // btnEntregarPedido
@@ -92,21 +97,22 @@
             // lbPedidosEntregues
             // 
             lbPedidosEntregues.BackColor = Color.White;
-            lbPedidosEntregues.BorderStyle = BorderStyle.None;
+            lbPedidosEntregues.BorderStyle = BorderStyle.FixedSingle;
             lbPedidosEntregues.FormattingEnabled = true;
             lbPedidosEntregues.ItemHeight = 15;
             lbPedidosEntregues.Location = new Point(669, 154);
             lbPedidosEntregues.Name = "lbPedidosEntregues";
-            lbPedidosEntregues.Size = new Size(210, 405);
+            lbPedidosEntregues.Size = new Size(210, 392);
             lbPedidosEntregues.TabIndex = 14;
             // 
             // lbStatusPronto
             // 
+            lbStatusPronto.BorderStyle = BorderStyle.FixedSingle;
             lbStatusPronto.FormattingEnabled = true;
             lbStatusPronto.ItemHeight = 15;
             lbStatusPronto.Location = new Point(200, 154);
             lbStatusPronto.Name = "lbStatusPronto";
-            lbStatusPronto.Size = new Size(182, 409);
+            lbStatusPronto.Size = new Size(182, 392);
             lbStatusPronto.TabIndex = 19;
             // 
             // textBox1
@@ -141,7 +147,7 @@
             btnRetornar4.FlatStyle = FlatStyle.Flat;
             btnRetornar4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRetornar4.ForeColor = Color.Black;
-            btnRetornar4.Location = new Point(12, 12);
+            btnRetornar4.Location = new Point(98, 29);
             btnRetornar4.Name = "btnRetornar4";
             btnRetornar4.Size = new Size(75, 23);
             btnRetornar4.TabIndex = 22;
@@ -149,13 +155,47 @@
             btnRetornar4.UseVisualStyleBackColor = false;
             btnRetornar4.Click += btnRetornar4_Click;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Yellow;
+            panel2.Controls.Add(btnRetornar4);
+            panel2.Controls.Add(btnStatusPedidos);
+            panel2.Location = new Point(-86, -17);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1062, 62);
+            panel2.TabIndex = 24;
+            // 
+            // btnStatusPedidos
+            // 
+            btnStatusPedidos.BackColor = Color.Yellow;
+            btnStatusPedidos.FlatStyle = FlatStyle.Flat;
+            btnStatusPedidos.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnStatusPedidos.ForeColor = Color.Black;
+            btnStatusPedidos.Location = new Point(1164, 8);
+            btnStatusPedidos.Name = "btnStatusPedidos";
+            btnStatusPedidos.Size = new Size(143, 30);
+            btnStatusPedidos.TabIndex = 16;
+            btnStatusPedidos.Text = "Ver status dos pedidos";
+            btnStatusPedidos.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.White;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox2.Image = Properties.Resources.Bolt_2024_pdf__5_;
+            pictureBox2.Location = new Point(-13, 48);
+            pictureBox2.Margin = new Padding(0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(109, 41);
+            pictureBox2.TabIndex = 25;
+            pictureBox2.TabStop = false;
+            // 
             // FormVisualizarStatus
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Inspirational_Gradient_Desktop_Background;
             ClientSize = new Size(891, 692);
-            Controls.Add(btnRetornar4);
+            Controls.Add(pictureBox2);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(lbStatusPronto);
@@ -164,8 +204,11 @@
             Controls.Add(lbStatusPreparando);
             Controls.Add(btnEntregarPedido);
             Controls.Add(lbPedidosEntregues);
+            Controls.Add(panel2);
             Name = "FormVisualizarStatus";
             Text = "Form3";
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -181,5 +224,8 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private Button btnRetornar4;
+        private Panel panel2;
+        private Button btnStatusPedidos;
+        private PictureBox pictureBox2;
     }
 }

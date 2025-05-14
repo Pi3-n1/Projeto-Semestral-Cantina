@@ -63,6 +63,116 @@ namespace Projeto_Semestral_Cantina.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bolt_2024_pdf__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Bolt-2024.pdf (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bolt_2024_pdf__1___1_ {
+            get {
+                object obj = ResourceManager.GetObject("Bolt-2024.pdf (1) (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bolt_2024_pdf__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Bolt-2024.pdf (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bolt_2024_pdf__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Bolt-2024.pdf (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bolt_2024_pdf__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Bolt-2024.pdf (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bolt_2024_pdf__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Bolt-2024.pdf (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bolt_2024_pdf__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Bolt-2024.pdf (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bolt_2024_pdf__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Bolt-2024.pdf (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bolt_2024_pdf__7___1_ {
+            get {
+                object obj = ResourceManager.GetObject("Bolt-2024.pdf (7) (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bolt_2024_pdf_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Bolt-2024.pdf-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap erasebg_transformed {
+            get {
+                object obj = ResourceManager.GetObject("erasebg-transformed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Inspirational_Gradient_Desktop_Background {
             get {
                 object obj = ResourceManager.GetObject("Inspirational Gradient Desktop Background", resourceCulture);

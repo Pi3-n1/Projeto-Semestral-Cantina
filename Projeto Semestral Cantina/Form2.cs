@@ -45,7 +45,7 @@ namespace Projeto_Semestral_Cantina
         private void btnEscolherPagamento_Click(object sender, EventArgs e)
         {
             FormFinalizandoPagamento formFinalizandoPagamento = new FormFinalizandoPagamento();
-            formFinalizandoPagamento.ShowDialog();
+            formFinalizandoPagamento.Show();
         }
     }
 }
