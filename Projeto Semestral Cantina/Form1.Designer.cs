@@ -40,8 +40,11 @@
             pictureBox2 = new PictureBox();
             panel2 = new Panel();
             lblTotal = new Label();
+            textBox4 = new TextBox();
+            nupQuantidade = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nupQuantidade).BeginInit();
             SuspendLayout();
             // 
             // lbItens
@@ -61,12 +64,12 @@
             // 
             lbCarrinhoCliente.BackColor = Color.White;
             lbCarrinhoCliente.BorderStyle = BorderStyle.FixedSingle;
-            lbCarrinhoCliente.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbCarrinhoCliente.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbCarrinhoCliente.FormattingEnabled = true;
-            lbCarrinhoCliente.ItemHeight = 20;
+            lbCarrinhoCliente.ItemHeight = 15;
             lbCarrinhoCliente.Location = new Point(706, 149);
             lbCarrinhoCliente.Name = "lbCarrinhoCliente";
-            lbCarrinhoCliente.Size = new Size(277, 382);
+            lbCarrinhoCliente.Size = new Size(277, 377);
             lbCarrinhoCliente.TabIndex = 1;
             lbCarrinhoCliente.SelectedIndexChanged += listBox2_SelectedIndexChanged;
             // 
@@ -199,12 +202,36 @@
             lblTotal.TabIndex = 21;
             lblTotal.Text = "label1";
             // 
+            // textBox4
+            // 
+            textBox4.BackColor = Color.White;
+            textBox4.BorderStyle = BorderStyle.None;
+            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox4.ForeColor = Color.Black;
+            textBox4.Location = new Point(544, 233);
+            textBox4.Name = "textBox4";
+            textBox4.ReadOnly = true;
+            textBox4.Size = new Size(90, 22);
+            textBox4.TabIndex = 23;
+            textBox4.Text = "Quantidade";
+            // 
+            // nupQuantidade
+            // 
+            nupQuantidade.Location = new Point(531, 261);
+            nupQuantidade.Name = "nupQuantidade";
+            nupQuantidade.Size = new Size(120, 23);
+            nupQuantidade.TabIndex = 24;
+            nupQuantidade.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nupQuantidade.ValueChanged += nupQuantidade_ValueChanged;
+            // 
             // FormCaixa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1296, 714);
+            Controls.Add(nupQuantidade);
+            Controls.Add(textBox4);
             Controls.Add(lblTotal);
             Controls.Add(pictureBox2);
             Controls.Add(btnPagamentoPedido);
@@ -220,6 +247,7 @@
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)nupQuantidade).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -238,5 +266,7 @@
         private PictureBox pictureBox2;
         private Panel panel2;
         private Label lblTotal;
+        private TextBox textBox4;
+        private NumericUpDown nupQuantidade;
     }
 }
