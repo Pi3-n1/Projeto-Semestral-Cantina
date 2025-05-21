@@ -206,6 +206,7 @@
             Controls.Add(lbPedidosEntregues);
             Controls.Add(panel2);
             Name = "FormVisualizarStatus";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form3";
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

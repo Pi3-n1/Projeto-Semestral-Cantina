@@ -135,6 +135,7 @@
             Controls.Add(btnEnviar);
             Controls.Add(panel2);
             Name = "FormFinalizandoPagamento";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form4";
             Load += FormFinalizandoPagamento_Load;
             panel2.ResumeLayout(false);

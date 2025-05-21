@@ -45,6 +45,7 @@
             txtNomeCliente = new TextBox();
             textBox1 = new TextBox();
             btnAdicionarNome = new Button();
+            btnResetarCarrinho = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nupQuantidade).BeginInit();
@@ -92,11 +93,12 @@
             // 
             // btnRemover
             // 
+            btnRemover.Anchor = AnchorStyles.None;
             btnRemover.BackColor = Color.Red;
             btnRemover.FlatStyle = FlatStyle.Flat;
             btnRemover.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRemover.ForeColor = Color.Black;
-            btnRemover.Location = new Point(544, 495);
+            btnRemover.Location = new Point(544, 466);
             btnRemover.Name = "btnRemover";
             btnRemover.Size = new Size(90, 23);
             btnRemover.TabIndex = 3;
@@ -204,6 +206,7 @@
             lblTotal.Size = new Size(100, 40);
             lblTotal.TabIndex = 21;
             lblTotal.Text = "label1";
+            lblTotal.Click += lblTotal_Click;
             // 
             // textBox4
             // 
@@ -263,12 +266,26 @@
             btnAdicionarNome.UseVisualStyleBackColor = false;
             btnAdicionarNome.Click += btnAdicionarNome_Click;
             // 
+            // btnResetarCarrinho
+            // 
+            btnResetarCarrinho.BackColor = Color.Red;
+            btnResetarCarrinho.FlatStyle = FlatStyle.Flat;
+            btnResetarCarrinho.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnResetarCarrinho.Location = new Point(788, 92);
+            btnResetarCarrinho.Name = "btnResetarCarrinho";
+            btnResetarCarrinho.Size = new Size(116, 23);
+            btnResetarCarrinho.TabIndex = 28;
+            btnResetarCarrinho.Text = "Resetar Carrinho";
+            btnResetarCarrinho.UseVisualStyleBackColor = false;
+            btnResetarCarrinho.Click += btnResetarCarrinho_Click;
+            // 
             // FormCaixa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1296, 714);
+            Controls.Add(btnResetarCarrinho);
             Controls.Add(btnAdicionarNome);
             Controls.Add(textBox1);
             Controls.Add(txtNomeCliente);
@@ -285,6 +302,7 @@
             Controls.Add(lbItens);
             Controls.Add(panel2);
             Name = "FormCaixa";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -313,5 +331,6 @@
         private TextBox txtNomeCliente;
         private TextBox textBox1;
         private Button btnAdicionarNome;
+        private Button btnResetarCarrinho;
     }
 }

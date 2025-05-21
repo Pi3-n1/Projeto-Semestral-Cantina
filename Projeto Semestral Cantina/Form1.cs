@@ -218,5 +218,33 @@ namespace Projeto_Semestral_Cantina
                 MessageBox.Show("Digite um nome válido!");
             }
         }
+
+        private void btnResetarCarrinho_Click(object sender, EventArgs e)
+        {
+            if (lbCarrinhoCliente.Items.Count > 0)
+            {
+                var resultado = MessageBox.Show("Você realmente quer RESETAR o carrinho?", "Resetar Carrinho", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                {
+                    lbCarrinhoCliente.Items.Clear();
+                    txtNomeCliente.Clear();
+                    txtNomeCliente.Enabled = true;
+                    btnAdicionarNome.Enabled = true;
+                    MessageBox.Show("Carrinho resetado!");
+                    totalPedido = 0;
+                    AtualizarTotal();
+                }
+            }
+            else
+            {
+                MessageBox.Show("O carrinho precisa ter algo para ser resetado!");
+            }
+
+        }
+
+        private void lblTotal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

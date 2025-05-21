@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            lbCaixaDinheiro = new ListBox();
-            lbFormaPagamento = new ListBox();
             btnEscolherPagamento = new Button();
             lbMostrarPedido = new ListBox();
             textBox2 = new TextBox();
@@ -41,44 +38,11 @@
             btnStatusPedidos = new Button();
             pictureBox2 = new PictureBox();
             txtValorRecebido = new TextBox();
+            cbFormaPagamento = new ComboBox();
+            lblCaixaDinheiro = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = Color.White;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(389, 487);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(139, 22);
-            textBox1.TabIndex = 11;
-            textBox1.Text = "Dinheiro do Caixa";
-            // 
-            // lbCaixaDinheiro
-            // 
-            lbCaixaDinheiro.BackColor = Color.White;
-            lbCaixaDinheiro.BorderStyle = BorderStyle.None;
-            lbCaixaDinheiro.FormattingEnabled = true;
-            lbCaixaDinheiro.ItemHeight = 15;
-            lbCaixaDinheiro.Location = new Point(257, 515);
-            lbCaixaDinheiro.Name = "lbCaixaDinheiro";
-            lbCaixaDinheiro.Size = new Size(409, 90);
-            lbCaixaDinheiro.TabIndex = 10;
-            lbCaixaDinheiro.SelectedIndexChanged += lbCaixa_SelectedIndexChanged;
-            // 
-            // lbFormaPagamento
-            // 
-            lbFormaPagamento.FormattingEnabled = true;
-            lbFormaPagamento.ItemHeight = 15;
-            lbFormaPagamento.Location = new Point(365, 82);
-            lbFormaPagamento.Name = "lbFormaPagamento";
-            lbFormaPagamento.Size = new Size(196, 364);
-            lbFormaPagamento.TabIndex = 16;
-            lbFormaPagamento.SelectedIndexChanged += lbFormaPagamento_SelectedIndexChanged;
             // 
             // btnEscolherPagamento
             // 
@@ -86,9 +50,9 @@
             btnEscolherPagamento.FlatStyle = FlatStyle.Flat;
             btnEscolherPagamento.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEscolherPagamento.ForeColor = Color.Black;
-            btnEscolherPagamento.Location = new Point(582, 252);
+            btnEscolherPagamento.Location = new Point(356, 221);
             btnEscolherPagamento.Name = "btnEscolherPagamento";
-            btnEscolherPagamento.Size = new Size(130, 26);
+            btnEscolherPagamento.Size = new Size(140, 26);
             btnEscolherPagamento.TabIndex = 17;
             btnEscolherPagamento.Text = "Escolher Pagamento";
             btnEscolherPagamento.UseVisualStyleBackColor = false;
@@ -98,7 +62,7 @@
             // 
             lbMostrarPedido.FormattingEnabled = true;
             lbMostrarPedido.ItemHeight = 15;
-            lbMostrarPedido.Location = new Point(69, 192);
+            lbMostrarPedido.Location = new Point(32, 148);
             lbMostrarPedido.Name = "lbMostrarPedido";
             lbMostrarPedido.Size = new Size(265, 304);
             lbMostrarPedido.TabIndex = 18;
@@ -110,7 +74,7 @@
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(131, 164);
+            textBox2.Location = new Point(94, 120);
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(138, 22);
@@ -123,7 +87,7 @@
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox3.ForeColor = Color.Black;
-            textBox3.Location = new Point(375, 54);
+            textBox3.Location = new Point(340, 164);
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
             textBox3.Size = new Size(175, 22);
@@ -196,29 +160,50 @@
             txtValorRecebido.BorderStyle = BorderStyle.None;
             txtValorRecebido.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtValorRecebido.ForeColor = Color.Black;
-            txtValorRecebido.Location = new Point(365, 458);
+            txtValorRecebido.Location = new Point(411, 305);
             txtValorRecebido.Name = "txtValorRecebido";
             txtValorRecebido.ReadOnly = true;
             txtValorRecebido.Size = new Size(196, 16);
             txtValorRecebido.TabIndex = 24;
             txtValorRecebido.TextChanged += txtValorRecebido_TextChanged;
             // 
+            // cbFormaPagamento
+            // 
+            cbFormaPagamento.FormattingEnabled = true;
+            cbFormaPagamento.Items.AddRange(new object[] { "Dinheiro", "Débito", "Crédito", "Pix" });
+            cbFormaPagamento.Location = new Point(365, 192);
+            cbFormaPagamento.Name = "cbFormaPagamento";
+            cbFormaPagamento.Size = new Size(121, 23);
+            cbFormaPagamento.TabIndex = 25;
+            cbFormaPagamento.SelectedIndexChanged += cbFormaPagamento_SelectedIndexChanged;
+            // 
+            // lblCaixaDinheiro
+            // 
+            lblCaixaDinheiro.AutoSize = true;
+            lblCaixaDinheiro.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCaixaDinheiro.Location = new Point(303, 422);
+            lblCaixaDinheiro.Name = "lblCaixaDinheiro";
+            lblCaixaDinheiro.Size = new Size(72, 30);
+            lblCaixaDinheiro.TabIndex = 26;
+            lblCaixaDinheiro.Text = "label1";
+            lblCaixaDinheiro.Click += label1_Click;
+            // 
             // FormPagamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(782, 641);
+            ClientSize = new Size(649, 483);
+            Controls.Add(lblCaixaDinheiro);
+            Controls.Add(cbFormaPagamento);
             Controls.Add(txtValorRecebido);
             Controls.Add(pictureBox2);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(lbMostrarPedido);
             Controls.Add(btnEscolherPagamento);
-            Controls.Add(lbFormaPagamento);
-            Controls.Add(textBox1);
-            Controls.Add(lbCaixaDinheiro);
             Controls.Add(panel2);
             Name = "FormPagamento";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form2";
             Load += FormPagamento_Load;
             panel2.ResumeLayout(false);
@@ -228,10 +213,6 @@
         }
 
         #endregion
-
-        private TextBox textBox1;
-        private ListBox lbCaixaDinheiro;
-        private ListBox lbFormaPagamento;
         private Button btnEscolherPagamento;
         private ListBox lbMostrarPedido;
         private TextBox textBox2;
@@ -242,7 +223,7 @@
         private Button btnStatusPedidos;
         private PictureBox pictureBox2;
         private TextBox txtValorRecebido;
-
-
+        private ComboBox cbFormaPagamento;
+        private Label lblCaixaDinheiro;
     }
 }
