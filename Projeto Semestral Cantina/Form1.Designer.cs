@@ -42,6 +42,9 @@
             lblTotal = new Label();
             textBox4 = new TextBox();
             nupQuantidade = new NumericUpDown();
+            txtNomeCliente = new TextBox();
+            textBox1 = new TextBox();
+            btnAdicionarNome = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nupQuantidade).BeginInit();
@@ -224,12 +227,51 @@
             nupQuantidade.Value = new decimal(new int[] { 1, 0, 0, 0 });
             nupQuantidade.ValueChanged += nupQuantidade_ValueChanged;
             // 
+            // txtNomeCliente
+            // 
+            txtNomeCliente.BorderStyle = BorderStyle.FixedSingle;
+            txtNomeCliente.Location = new Point(252, 92);
+            txtNomeCliente.Name = "txtNomeCliente";
+            txtNomeCliente.Size = new Size(173, 23);
+            txtNomeCliente.TabIndex = 25;
+            txtNomeCliente.TextChanged += txtNomeCliente_TextChanged;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.White;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox1.ForeColor = Color.Black;
+            textBox1.Location = new Point(270, 64);
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(131, 22);
+            textBox1.TabIndex = 26;
+            textBox1.Text = "Nome do Cliente";
+            // 
+            // btnAdicionarNome
+            // 
+            btnAdicionarNome.BackColor = Color.Yellow;
+            btnAdicionarNome.FlatStyle = FlatStyle.Flat;
+            btnAdicionarNome.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAdicionarNome.ForeColor = Color.Black;
+            btnAdicionarNome.Location = new Point(431, 92);
+            btnAdicionarNome.Name = "btnAdicionarNome";
+            btnAdicionarNome.Size = new Size(107, 23);
+            btnAdicionarNome.TabIndex = 27;
+            btnAdicionarNome.Text = "Adicionar Nome";
+            btnAdicionarNome.UseVisualStyleBackColor = false;
+            btnAdicionarNome.Click += btnAdicionarNome_Click;
+            // 
             // FormCaixa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1296, 714);
+            Controls.Add(btnAdicionarNome);
+            Controls.Add(textBox1);
+            Controls.Add(txtNomeCliente);
             Controls.Add(nupQuantidade);
             Controls.Add(textBox4);
             Controls.Add(lblTotal);
@@ -268,5 +310,8 @@
         private Label lblTotal;
         private TextBox textBox4;
         private NumericUpDown nupQuantidade;
+        private TextBox txtNomeCliente;
+        private TextBox textBox1;
+        private Button btnAdicionarNome;
     }
 }

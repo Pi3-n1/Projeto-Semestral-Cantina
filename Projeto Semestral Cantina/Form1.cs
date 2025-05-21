@@ -4,7 +4,6 @@ namespace Projeto_Semestral_Cantina
 {
     public partial class FormCaixa : Form
     {
-
         List<Produto> produtosDisponiveis = new List<Produto>();
         List<Produto> carrinho = new List<Produto>();
         decimal totalPedido = 0;
@@ -16,7 +15,6 @@ namespace Projeto_Semestral_Cantina
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void InicializarProdutos()
@@ -48,22 +46,62 @@ namespace Projeto_Semestral_Cantina
                 lbItens.Items.Add(produto);
             }
         }
+
+        private string nomeCliente = "";
         private void AtualizarCarrinho()
         {
             lbCarrinhoCliente.Items.Clear();
-            foreach (var produto in carrinho)
+            if (!string.IsNullOrEmpty(nomeCliente))
             {
-                lbCarrinhoCliente.Items.Add(produto);
+                lbCarrinhoCliente.Items.Add($"CLIENTE: {nomeCliente}");
+                lbCarrinhoCliente.Items.Add("--------------------------");
+            }
+            var produtosAgrupados = carrinho
+                .GroupBy(p => p.Nome)
+                .Select(g => new
+                {
+                    Nome = g.Key,
+                    Quantidade = g.Sum(p => p.Quantidade),
+                    Preco = g.First().Preco
+                });
+
+            foreach (var produto in produtosAgrupados)
+            {
+                lbCarrinhoCliente.Items.Add($"{produto.Nome} x{produto.Quantidade} - R${produto.Preco * produto.Quantidade:F2}");
             }
         }
+
         private void btnRetornar_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnPagamentoPedido_Click(object sender, EventArgs e)
         {
-            FormPagamento formPagamento = new FormPagamento();
+            if (carrinho.Count == 0)
+            {
+                MessageBox.Show("Adicione itens ao carrinho antes de prosseguir para o pagamento!");
+                return;
+            }
+            List<string> itensFormatados = new List<string>();
+            itensFormatados.Add($"CLIENTE: {nomeCliente}");
+            itensFormatados.Add("<------------------------>");
+            var produtosAgrupados = carrinho
+                .GroupBy(p => p.Nome)
+                .Select(g => new
+                {
+                    Nome = g.Key,
+                    Quantidade = g.Sum(p => p.Quantidade),
+                    Preco = g.First().Preco
+                });
+
+            foreach (var produto in produtosAgrupados)
+            {
+                itensFormatados.Add($"{produto.Nome} x{produto.Quantidade} - R${produto.Preco * produto.Quantidade:F2}");
+            }
+
+            itensFormatados.Add("--------------------------");
+            itensFormatados.Add($"TOTAL: R${totalPedido:F2}");
+            FormPagamento formPagamento = new FormPagamento(itensFormatados, totalPedido);
             formPagamento.Show();
         }
 
@@ -75,31 +113,48 @@ namespace Projeto_Semestral_Cantina
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            string quantidade = $"{nupQuantidade.Value}";
+            if (string.IsNullOrEmpty(nomeCliente))
+            {
+                MessageBox.Show("Adicione o nome do cliente primeiro!");
+                return;
+            }
+
+            int quantidade = (int)nupQuantidade.Value;
+            if (quantidade <= 0)
+            {
+                MessageBox.Show("A quantidade deve ser maior que zero!");
+                return;
+            }
+
             if (lbItens.SelectedItem != null)
             {
                 Produto produtoSelecionado = (Produto)lbItens.SelectedItem;
-                //lbCarrinhoCliente.Items.Add($"{lbItens.SelectedItem} / quantidade = {quantidade}");
-                carrinho.Add(new Produto(produtoSelecionado.Nome, produtoSelecionado.Preco, produtoSelecionado.Quantidade));
-                totalPedido += produtoSelecionado.Preco * int.Parse(quantidade);
+                carrinho.Add(new Produto(produtoSelecionado.Nome, produtoSelecionado.Preco, quantidade));
+                totalPedido += produtoSelecionado.Preco * quantidade;
                 AtualizarTotal();
                 AtualizarCarrinho();
             }
             else
             {
-                MessageBox.Show("Para adicionar, primeiro selecione um item disponível!");
+                MessageBox.Show("Selecione um item para adicionar!");
             }
-
         }
+
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
-            string quantidade = $"{nupQuantidade.Value}";
             if (lbCarrinhoCliente.SelectedItem != null)
             {
-                Produto produtoSelecionado = (Produto)lbCarrinhoCliente.SelectedItem;
-                carrinho.Remove(produtoSelecionado);
-                totalPedido -= produtoSelecionado.Preco * int.Parse(quantidade);
+                string itemSelecionado = lbCarrinhoCliente.SelectedItem.ToString();
+                string nomeProduto = itemSelecionado.Split('x')[0].Trim();
+
+                var produtosParaRemover = carrinho.Where(p => p.Nome == nomeProduto).ToList();
+                foreach (var produto in produtosParaRemover)
+                {
+                    totalPedido -= produto.Preco * produto.Quantidade;
+                    carrinho.Remove(produto);
+                }
+
                 AtualizarCarrinho();
                 AtualizarTotal();
             }
@@ -111,12 +166,10 @@ namespace Projeto_Semestral_Cantina
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void lbItens_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void AtualizarTotal()
@@ -126,17 +179,44 @@ namespace Projeto_Semestral_Cantina
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void nupQuantidade_ValueChanged(object sender, EventArgs e)
         {
+        }
 
+        private void txtNomeCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdicionarNome_Click(object sender, EventArgs e)
+        {
+            string novoNome = txtNomeCliente.Text.Trim();
+
+            if (!string.IsNullOrWhiteSpace(novoNome))
+            {
+                nomeCliente = novoNome;
+
+                carrinho.Clear();
+                totalPedido = 0;
+                AtualizarTotal();
+                AtualizarCarrinho();
+
+                txtNomeCliente.Enabled = false;
+                btnAdicionarNome.Enabled = false;
+                lbItens.Enabled = true;
+                nupQuantidade.Enabled = true;
+                btnAdicionar.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Digite um nome válido!");
+            }
         }
     }
 }

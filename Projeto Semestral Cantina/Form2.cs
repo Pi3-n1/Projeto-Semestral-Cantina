@@ -12,22 +12,27 @@ namespace Projeto_Semestral_Cantina
 {
     public partial class FormPagamento : Form
     {
-        public FormPagamento()
+        private List<string> itensPedido;
+        private decimal totalPedido;
+
+        // Construtor modificado para receber os dados
+        public FormPagamento(List<string> itensPedido, decimal totalPedido)
         {
             InitializeComponent();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbCaixa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            this.itensPedido = itensPedido;
+            this.totalPedido = totalPedido;
         }
 
         private void FormPagamento_Load(object sender, EventArgs e)
+        {
+            // Preenche a ListBox com os itens do pedido
+            foreach (var item in itensPedido)
+            {
+                lbMostrarPedido.Items.Add(item);
+            }
+        }
+
+        private void lbCaixa_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -46,6 +51,16 @@ namespace Projeto_Semestral_Cantina
         {
             FormFinalizandoPagamento formFinalizandoPagamento = new FormFinalizandoPagamento();
             formFinalizandoPagamento.Show();
+        }
+
+        private void lbFormaPagamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtValorRecebido_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

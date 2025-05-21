@@ -40,6 +40,7 @@
             btnRetornar = new Button();
             btnStatusPedidos = new Button();
             pictureBox2 = new PictureBox();
+            txtValorRecebido = new TextBox();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -77,6 +78,7 @@
             lbFormaPagamento.Name = "lbFormaPagamento";
             lbFormaPagamento.Size = new Size(196, 364);
             lbFormaPagamento.TabIndex = 16;
+            lbFormaPagamento.SelectedIndexChanged += lbFormaPagamento_SelectedIndexChanged;
             // 
             // btnEscolherPagamento
             // 
@@ -189,11 +191,24 @@
             pictureBox2.TabIndex = 23;
             pictureBox2.TabStop = false;
             // 
+            // txtValorRecebido
+            // 
+            txtValorRecebido.BorderStyle = BorderStyle.None;
+            txtValorRecebido.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtValorRecebido.ForeColor = Color.Black;
+            txtValorRecebido.Location = new Point(365, 458);
+            txtValorRecebido.Name = "txtValorRecebido";
+            txtValorRecebido.ReadOnly = true;
+            txtValorRecebido.Size = new Size(196, 16);
+            txtValorRecebido.TabIndex = 24;
+            txtValorRecebido.TextChanged += txtValorRecebido_TextChanged;
+            // 
             // FormPagamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(782, 641);
+            Controls.Add(txtValorRecebido);
             Controls.Add(pictureBox2);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
@@ -226,5 +241,8 @@
         private Button btnRetornar;
         private Button btnStatusPedidos;
         private PictureBox pictureBox2;
+        private TextBox txtValorRecebido;
+
+
     }
 }
