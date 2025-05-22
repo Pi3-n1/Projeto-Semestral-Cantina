@@ -157,6 +157,7 @@
             // 
             // txtValorRecebido
             // 
+            txtValorRecebido.BackColor = Color.White;
             txtValorRecebido.BorderStyle = BorderStyle.None;
             txtValorRecebido.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtValorRecebido.ForeColor = Color.Black;
@@ -192,6 +193,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(649, 483);
             Controls.Add(lblCaixaDinheiro);
             Controls.Add(cbFormaPagamento);

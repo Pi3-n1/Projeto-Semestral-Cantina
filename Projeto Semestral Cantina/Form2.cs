@@ -12,10 +12,9 @@ namespace Projeto_Semestral_Cantina
 {
     public partial class FormPagamento : Form
     {
-        
-        //List<int> caixaDinheiro = new List<int>();
         private List<string> itensPedido;
         private decimal totalPedido;
+        decimal DinheiroDoCaixa = 250;
 
         
 
@@ -53,6 +52,13 @@ namespace Projeto_Semestral_Cantina
                 FormFinalizandoPagamento formFinalizandoPagamento = new FormFinalizandoPagamento();
                 formFinalizandoPagamento.Show();
             }
+            if (cbFormaPagamento.SelectedIndex == 0)
+            { 
+                FormFinalizandoPagamento formFinalizandoPagamento = new FormFinalizandoPagamento();
+                DinheiroDoCaixa += totalPedido;
+                AtualizarCaixa();
+                formFinalizandoPagamento.Show();
+            }
             else
             {
                 MessageBox.Show("Escolha uma forma de pagamento válida!");
@@ -81,7 +87,7 @@ namespace Projeto_Semestral_Cantina
 
         private void AtualizarCaixa()
         {
-            lblCaixaDinheiro.Text = $"Dinheiro no Caixa: R${250:F2}"; ;
+            lblCaixaDinheiro.Text = $"Dinheiro no Caixa: R${DinheiroDoCaixa:F2}"; ;
         }
     }
 }
