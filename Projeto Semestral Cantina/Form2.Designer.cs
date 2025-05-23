@@ -40,6 +40,7 @@
             txtValorRecebido = new TextBox();
             cbFormaPagamento = new ComboBox();
             lblCaixaDinheiro = new Label();
+            checkBox1 = new CheckBox();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -74,7 +75,7 @@
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(94, 120);
+            textBox2.Location = new Point(32, 120);
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(138, 22);
@@ -189,12 +190,26 @@
             lblCaixaDinheiro.Text = "label1";
             lblCaixaDinheiro.Click += label1_Click;
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            checkBox1.ForeColor = Color.Black;
+            checkBox1.Location = new Point(203, 124);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(94, 19);
+            checkBox1.TabIndex = 27;
+            checkBox1.Text = "Para viagem";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
             // FormPagamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(649, 483);
+            Controls.Add(checkBox1);
             Controls.Add(lblCaixaDinheiro);
             Controls.Add(cbFormaPagamento);
             Controls.Add(txtValorRecebido);
@@ -227,5 +242,6 @@
         private TextBox txtValorRecebido;
         private ComboBox cbFormaPagamento;
         private Label lblCaixaDinheiro;
+        private CheckBox checkBox1;
     }
 }

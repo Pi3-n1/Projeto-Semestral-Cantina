@@ -12,9 +12,18 @@ namespace Projeto_Semestral_Cantina
 {
     public partial class FormFinalizandoPagamento : Form
     {
+
         public FormFinalizandoPagamento()
         {
             InitializeComponent();
+        }
+
+        private void FormFinalizandoPagamento_Load(object sender, EventArgs e)
+        {
+            //foreach (var item in itensPedido)
+            //{
+            //    lbExtrato.Items.Add(item);
+            //}
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
@@ -27,9 +36,5 @@ namespace Projeto_Semestral_Cantina
             Close();
         }
 
-        private void FormFinalizandoPagamento_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

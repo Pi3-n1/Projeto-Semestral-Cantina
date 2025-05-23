@@ -16,7 +16,7 @@ namespace Projeto_Semestral_Cantina
         private decimal totalPedido;
         decimal DinheiroDoCaixa = 250;
 
-        
+
 
         public FormPagamento(List<string> itensPedido, decimal totalPedido)
         {
@@ -53,7 +53,7 @@ namespace Projeto_Semestral_Cantina
                 formFinalizandoPagamento.Show();
             }
             if (cbFormaPagamento.SelectedIndex == 0)
-            { 
+            {
                 FormFinalizandoPagamento formFinalizandoPagamento = new FormFinalizandoPagamento();
                 DinheiroDoCaixa += totalPedido;
                 AtualizarCaixa();
@@ -82,12 +82,17 @@ namespace Projeto_Semestral_Cantina
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void AtualizarCaixa()
         {
             lblCaixaDinheiro.Text = $"Dinheiro no Caixa: R${DinheiroDoCaixa:F2}"; ;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
