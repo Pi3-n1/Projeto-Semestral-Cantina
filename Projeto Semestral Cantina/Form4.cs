@@ -1,34 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Projeto_Semestral_Cantina
 {
     public partial class FormFinalizandoPagamento : Form
     {
+        private List<string> itensPedido;
 
-        public FormFinalizandoPagamento()
+        public FormFinalizandoPagamento(List<string> itensPedido)
         {
             InitializeComponent();
+            this.itensPedido = itensPedido;
+            CarregarItensPedido();
         }
 
+        private void CarregarItensPedido()
+        {
+            lbExtrato.Items.Clear();
+            foreach (var item in itensPedido)
+            {
+                lbExtrato.Items.Add(item);
+            }
+        }
         private void FormFinalizandoPagamento_Load(object sender, EventArgs e)
         {
-            //foreach (var item in itensPedido)
-            //{
-            //    lbExtrato.Items.Add(item);
-            //}
         }
-
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Pedido enviado para a cozinha!");
+            FormVisualizarStatus formStatus = Application.OpenForms["FormVisualizarStatus"] as FormVisualizarStatus;
+
+            if (formStatus != null)
+            {
+                formStatus.AdicionarPedido(new List<string>(lbExtrato.Items.Cast<string>()));
+                MessageBox.Show("Pedido enviado para a cozinha!");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("A tela de status não está aberta!");
+            }
         }
 
         private void btnRetornar3_Click(object sender, EventArgs e)
@@ -36,5 +47,9 @@ namespace Projeto_Semestral_Cantina
             Close();
         }
 
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Imprimindo pedido!");
+        }
     }
 }

@@ -46,17 +46,21 @@ namespace Projeto_Semestral_Cantina
 
         private void btnEscolherPagamento_Click(object sender, EventArgs e)
         {
-
             if (cbFormaPagamento.SelectedIndex > -1)
             {
-                FormFinalizandoPagamento formFinalizandoPagamento = new FormFinalizandoPagamento();
-                formFinalizandoPagamento.Show();
-            }
-            if (cbFormaPagamento.SelectedIndex == 0)
-            {
-                FormFinalizandoPagamento formFinalizandoPagamento = new FormFinalizandoPagamento();
-                DinheiroDoCaixa += totalPedido;
-                AtualizarCaixa();
+                List<string> itensCompletos = new List<string>(itensPedido);
+                itensCompletos.Insert(0, $"HORA DO PEDIDO: {DateTime.Now.ToString("HH:mm")}");
+                itensCompletos.Insert(1, $"PARA VIAGEM: {(checkBox1.Checked ? "SIM" : "NÃO")}");
+                itensCompletos.Insert(2, "--------------------------");
+
+                FormFinalizandoPagamento formFinalizandoPagamento = new FormFinalizandoPagamento(itensCompletos);
+
+                if (cbFormaPagamento.SelectedIndex == 0)
+                {
+                    DinheiroDoCaixa += totalPedido;
+                    AtualizarCaixa();
+                }
+
                 formFinalizandoPagamento.Show();
             }
             else

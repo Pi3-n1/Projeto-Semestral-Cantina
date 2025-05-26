@@ -47,7 +47,7 @@
             btnEnviar.BackColor = Color.Yellow;
             btnEnviar.FlatStyle = FlatStyle.Flat;
             btnEnviar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEnviar.Location = new Point(200, 213);
+            btnEnviar.Location = new Point(145, 206);
             btnEnviar.Name = "btnEnviar";
             btnEnviar.Size = new Size(167, 23);
             btnEnviar.TabIndex = 16;
@@ -61,7 +61,7 @@
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(133, 116);
+            textBox1.Location = new Point(85, 117);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(293, 36);
             textBox1.TabIndex = 17;
@@ -132,9 +132,9 @@
             // 
             lbExtrato.FormattingEnabled = true;
             lbExtrato.ItemHeight = 15;
-            lbExtrato.Location = new Point(456, 89);
+            lbExtrato.Location = new Point(409, 81);
             lbExtrato.Name = "lbExtrato";
-            lbExtrato.Size = new Size(156, 214);
+            lbExtrato.Size = new Size(226, 214);
             lbExtrato.TabIndex = 25;
             // 
             // textBox2
@@ -143,7 +143,7 @@
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(498, 55);
+            textBox2.Location = new Point(483, 47);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(75, 28);
             textBox2.TabIndex = 26;
@@ -155,12 +155,13 @@
             btnImprimir.FlatStyle = FlatStyle.Flat;
             btnImprimir.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnImprimir.ForeColor = Color.Black;
-            btnImprimir.Location = new Point(480, 309);
+            btnImprimir.Location = new Point(465, 301);
             btnImprimir.Name = "btnImprimir";
             btnImprimir.Size = new Size(110, 23);
             btnImprimir.TabIndex = 27;
             btnImprimir.Text = "Imprimir Extrato";
             btnImprimir.UseVisualStyleBackColor = false;
+            btnImprimir.Click += btnImprimir_Click;
             // 
             // FormFinalizandoPagamento
             // 

@@ -63,7 +63,7 @@
             textBox4.BorderStyle = BorderStyle.None;
             textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox4.ForeColor = Color.Black;
-            textBox4.Location = new Point(127, 94);
+            textBox4.Location = new Point(160, 98);
             textBox4.Name = "textBox4";
             textBox4.ReadOnly = true;
             textBox4.Size = new Size(145, 22);
@@ -78,7 +78,8 @@
             lbStatusPreparando.ItemHeight = 15;
             lbStatusPreparando.Location = new Point(12, 154);
             lbStatusPreparando.Name = "lbStatusPreparando";
-            lbStatusPreparando.Size = new Size(182, 392);
+            lbStatusPreparando.ScrollAlwaysVisible = true;
+            lbStatusPreparando.Size = new Size(214, 392);
             lbStatusPreparando.TabIndex = 16;
             // 
             // btnEntregarPedido
@@ -87,7 +88,7 @@
             btnEntregarPedido.FlatStyle = FlatStyle.Flat;
             btnEntregarPedido.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEntregarPedido.ForeColor = Color.Black;
-            btnEntregarPedido.Location = new Point(456, 343);
+            btnEntregarPedido.Location = new Point(485, 343);
             btnEntregarPedido.Name = "btnEntregarPedido";
             btnEntregarPedido.Size = new Size(132, 25);
             btnEntregarPedido.TabIndex = 15;
@@ -110,9 +111,9 @@
             lbStatusPronto.BorderStyle = BorderStyle.FixedSingle;
             lbStatusPronto.FormattingEnabled = true;
             lbStatusPronto.ItemHeight = 15;
-            lbStatusPronto.Location = new Point(200, 154);
+            lbStatusPronto.Location = new Point(232, 154);
             lbStatusPronto.Name = "lbStatusPronto";
-            lbStatusPronto.Size = new Size(182, 392);
+            lbStatusPronto.Size = new Size(204, 392);
             lbStatusPronto.TabIndex = 19;
             // 
             // textBox1
@@ -121,7 +122,7 @@
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(32, 126);
+            textBox1.Location = new Point(50, 126);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
             textBox1.Size = new Size(140, 22);
@@ -134,7 +135,7 @@
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(213, 126);
+            textBox2.Location = new Point(259, 126);
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(155, 22);
