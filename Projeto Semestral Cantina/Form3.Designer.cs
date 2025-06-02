@@ -1,6 +1,6 @@
 ﻿namespace Projeto_Semestral_Cantina
 {
-    partial class FormVisualizarStatus
+    partial class FormBalcao
     {
         /// <summary>
         /// Required designer variable.
@@ -94,6 +94,7 @@
             btnEntregarPedido.TabIndex = 15;
             btnEntregarPedido.Text = "Entregar Pedido ->";
             btnEntregarPedido.UseVisualStyleBackColor = false;
+            btnEntregarPedido.Click += btnEntregarPedido_Click;
             // 
             // lbPedidosEntregues
             // 
@@ -191,7 +192,7 @@
             pictureBox2.TabIndex = 25;
             pictureBox2.TabStop = false;
             // 
-            // FormVisualizarStatus
+            // FormBalcao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -207,7 +208,7 @@
             Controls.Add(btnEntregarPedido);
             Controls.Add(lbPedidosEntregues);
             Controls.Add(panel2);
-            Name = "FormVisualizarStatus";
+            Name = "FormBalcao";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form3";
             panel2.ResumeLayout(false);

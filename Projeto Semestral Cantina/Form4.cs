@@ -28,7 +28,7 @@ namespace Projeto_Semestral_Cantina
         }
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            FormVisualizarStatus formStatus = Application.OpenForms["FormVisualizarStatus"] as FormVisualizarStatus;
+            FormBalcao formStatus = Application.OpenForms["FormBalcão"] as FormBalcao;
 
             if (formStatus != null)
             {

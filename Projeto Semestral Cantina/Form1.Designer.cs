@@ -303,7 +303,7 @@
             Controls.Add(panel2);
             Name = "FormCaixa";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "   ";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel2.ResumeLayout(false);

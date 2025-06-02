@@ -4,11 +4,11 @@ using System.Windows.Forms;
 
 namespace Projeto_Semestral_Cantina
 {
-    public partial class FormVisualizarStatus : Form
+    public partial class FormBalcao : Form
     {
         private List<string> todosPedidos = new List<string>();
 
-        public FormVisualizarStatus()
+        public FormBalcao()
         {
             InitializeComponent();
         }
@@ -34,6 +34,11 @@ namespace Projeto_Semestral_Cantina
         private void btnRetornar4_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnEntregarPedido_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

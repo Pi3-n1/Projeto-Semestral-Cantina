@@ -73,6 +73,7 @@ namespace Projeto_Semestral_Cantina
 
         private void btnRetornar_Click(object sender, EventArgs e)
         {
+            Close();
         }
 
         private void btnPagamentoPedido_Click(object sender, EventArgs e)
@@ -107,7 +108,7 @@ namespace Projeto_Semestral_Cantina
 
         private void btnStatusPedidos_Click(object sender, EventArgs e)
         {
-            FormVisualizarStatus formVisualizarStatus = new FormVisualizarStatus();
+            FormBalcao formVisualizarStatus = new FormBalcao();
             formVisualizarStatus.Show();
         }
 
