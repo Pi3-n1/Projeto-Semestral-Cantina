@@ -17,16 +17,43 @@ namespace Projeto_Semestral_Cantina
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void txtLogin_TextChanged(object sender, EventArgs e)
         {
-            FormCaixa formCaixa = new FormCaixa();
-            formCaixa.Show();
+
         }
 
-        private void btnBalcao_Click(object sender, EventArgs e)
+        private void btnConectar_Click(object sender, EventArgs e)
         {
-            FormBalcao formBalcao = new FormBalcao();
-            formBalcao.Show();
+            string login = txtLogin.Text;
+            string senha = txtSenha.Text;
+            if (!string.IsNullOrEmpty(login) || !string.IsNullOrEmpty(senha))
+            {
+
+                if (login == "Balcao123" && senha == "1234")
+                {
+                    txtLogin.Clear();
+                    txtSenha.Clear();
+                    FormBalcao formBalcao = new FormBalcao();
+                    formBalcao.Show();
+                }
+                else if (login == "Caixa123" && senha == "1234")
+                {
+                    txtLogin.Clear();
+                    txtSenha.Clear();
+                    FormCaixa formCaixa = new FormCaixa();
+                    formCaixa.Show();
+                }
+                else
+                {
+                    txtLogin.Clear();
+                    txtSenha.Clear();
+                    MessageBox.Show("Login Incorreto!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Você precisa digitar o Login e Senha!");
+            }
         }
     }
 }
