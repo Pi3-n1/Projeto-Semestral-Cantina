@@ -100,7 +100,7 @@
             btnRetornar2.BackColor = Color.Red;
             btnRetornar2.FlatStyle = FlatStyle.Flat;
             btnRetornar2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRetornar2.Location = new Point(280, 8);
+            btnRetornar2.Location = new Point(275, 6);
             btnRetornar2.Name = "btnRetornar2";
             btnRetornar2.Size = new Size(75, 23);
             btnRetornar2.TabIndex = 21;

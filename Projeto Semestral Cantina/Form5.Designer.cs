@@ -110,7 +110,7 @@
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox3.ForeColor = Color.Black;
-            textBox3.Location = new Point(201, 59);
+            textBox3.Location = new Point(199, 62);
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
             textBox3.Size = new Size(214, 28);

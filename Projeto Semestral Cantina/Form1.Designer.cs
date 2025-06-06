@@ -111,7 +111,7 @@
             btnRetornar.BackColor = Color.Red;
             btnRetornar.FlatStyle = FlatStyle.Flat;
             btnRetornar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRetornar.Location = new Point(24, 8);
+            btnRetornar.Location = new Point(18, 10);
             btnRetornar.Name = "btnRetornar";
             btnRetornar.Size = new Size(106, 30);
             btnRetornar.TabIndex = 7;
@@ -165,7 +165,7 @@
             btnStatusPedidos.FlatStyle = FlatStyle.Flat;
             btnStatusPedidos.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnStatusPedidos.ForeColor = Color.Black;
-            btnStatusPedidos.Location = new Point(1153, 8);
+            btnStatusPedidos.Location = new Point(1160, 10);
             btnStatusPedidos.Name = "btnStatusPedidos";
             btnStatusPedidos.Size = new Size(143, 30);
             btnStatusPedidos.TabIndex = 16;

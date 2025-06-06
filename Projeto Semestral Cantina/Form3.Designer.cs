@@ -149,7 +149,7 @@
             btnRetornar4.FlatStyle = FlatStyle.Flat;
             btnRetornar4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRetornar4.ForeColor = Color.Black;
-            btnRetornar4.Location = new Point(98, 29);
+            btnRetornar4.Location = new Point(93, 15);
             btnRetornar4.Name = "btnRetornar4";
             btnRetornar4.Size = new Size(75, 23);
             btnRetornar4.TabIndex = 22;
@@ -162,9 +162,9 @@
             panel2.BackColor = Color.Yellow;
             panel2.Controls.Add(btnRetornar4);
             panel2.Controls.Add(btnStatusPedidos);
-            panel2.Location = new Point(-86, -17);
+            panel2.Location = new Point(-86, -9);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1062, 62);
+            panel2.Size = new Size(1062, 45);
             panel2.TabIndex = 24;
             // 
             // btnStatusPedidos
@@ -185,7 +185,7 @@
             pictureBox2.BackColor = Color.White;
             pictureBox2.BackgroundImageLayout = ImageLayout.Center;
             pictureBox2.Image = Properties.Resources.Bolt_2024_pdf__5_;
-            pictureBox2.Location = new Point(-13, 48);
+            pictureBox2.Location = new Point(-10, 39);
             pictureBox2.Margin = new Padding(0);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(109, 41);

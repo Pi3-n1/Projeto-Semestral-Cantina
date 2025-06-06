@@ -43,6 +43,13 @@ namespace Projeto_Semestral_Cantina
                     FormCaixa formCaixa = new FormCaixa();
                     formCaixa.Show();
                 }
+                else if (login == "Cozinha123" && senha == "1234")
+                {
+                    txtLogin.Clear();
+                    txtSenha.Clear();
+                    FormCozinha formCozinha = new FormCozinha();
+                    formCozinha.Show();
+                }
                 else
                 {
                     txtLogin.Clear();

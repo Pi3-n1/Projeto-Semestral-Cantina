@@ -72,7 +72,7 @@
             btnRetornar3.BackColor = Color.Red;
             btnRetornar3.FlatStyle = FlatStyle.Flat;
             btnRetornar3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRetornar3.Location = new Point(220, 8);
+            btnRetornar3.Location = new Point(215, 9);
             btnRetornar3.Name = "btnRetornar3";
             btnRetornar3.Size = new Size(75, 23);
             btnRetornar3.TabIndex = 18;
