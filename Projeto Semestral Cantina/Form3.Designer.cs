@@ -211,6 +211,7 @@
             Name = "FormBalcao";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form3";
+            Load += FormBalcao_Load;
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);

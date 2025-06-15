@@ -23,33 +23,35 @@ namespace Projeto_Semestral_Cantina
                 lbExtrato.Items.Add(item);
             }
         }
+
         private void FormFinalizandoPagamento_Load(object sender, EventArgs e)
         {
         }
+
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            FormBalcao formStatus = Application.OpenForms["FormBalcão"] as FormBalcao;
+            var pedidoCompleto = new List<string>(itensPedido);
+            pedidoCompleto.Insert(0, $"HORA: {DateTime.Now:HH:mm:ss}");
+            pedidoCompleto.Add("STATUS: AGUARDANDO PREPARO");
 
-            if (formStatus != null)
-            {
-                formStatus.AdicionarPedido(new List<string>(lbExtrato.Items.Cast<string>()));
-                MessageBox.Show("Pedido enviado para a cozinha!");
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("A tela de status não está aberta!");
-            }
-        }
-
-        private void btnRetornar3_Click(object sender, EventArgs e)
-        {
-            Close();
+            PedidoManager.AdicionarPedidoCozinha(pedidoCompleto);
+            MessageBox.Show("Pedido enviado para a cozinha!");
+            this.Close();
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Imprimindo pedido!");
+            string mensagem = "=== COMPROVANTE ===\n";
+            foreach (var item in lbExtrato.Items)
+            {
+                mensagem += item.ToString() + "\n";
+            }
+            MessageBox.Show(mensagem, "Comprovante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnRetornar3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

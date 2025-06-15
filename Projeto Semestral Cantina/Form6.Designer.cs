@@ -95,7 +95,8 @@
             lbOrdemPedidos.Name = "lbOrdemPedidos";
             lbOrdemPedidos.Size = new Size(214, 482);
             lbOrdemPedidos.TabIndex = 24;
-            lbOrdemPedidos.SelectedIndexChanged += lbOrdemPedidos_SelectedIndexChanged;
+            this.btnPedidoPronto.Click += new System.EventHandler(this.btnPedidoPronto_Click);
+
             // 
             // btnPedidoPronto
             // 

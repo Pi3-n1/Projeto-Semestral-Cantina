@@ -8,17 +8,35 @@ namespace Projeto_Semestral_Cantina
     {
         private List<string> todosPedidos = new List<string>();
 
-        public FormBalcao()
-        {
-            InitializeComponent();
-        }
+            public FormBalcao()
+            {
+                InitializeComponent();
+                CarregarPedidosProntos();
 
-        public void AdicionarPedido(List<string> itensPedido)
+                PedidoManager.NovoPedidoPronto += () => Invoke(new Action(CarregarPedidosProntos));
+            }
+
+            private void CarregarPedidosProntos()
+            {
+                lbStatusPronto.Items.Clear();
+                foreach (var item in PedidoManager.ObterPedidosProntos())
+                {
+                    lbStatusPronto.Items.Add(item);
+                }
+                lbStatusPronto.TopIndex = lbStatusPronto.Items.Count - 1;
+            }
+
+        public void AdicionarPedidoPronto(string pedidoPronto)
         {
-            todosPedidos.Add($"======= PEDIDO {DateTime.Now.ToString("HH:mm:ss")} =======");
-            todosPedidos.AddRange(itensPedido);
-            todosPedidos.Add("----------------------------");
-            AtualizarListaPedidos();
+            if (lbStatusPronto.InvokeRequired)
+            {
+                lbStatusPronto.Invoke(new Action<string>(AdicionarPedidoPronto), pedidoPronto);
+            }
+            else
+            {
+                lbStatusPronto.Items.Add(pedidoPronto);
+                lbStatusPronto.TopIndex = lbStatusPronto.Items.Count - 1;
+            }
         }
 
         private void AtualizarListaPedidos()
@@ -37,6 +55,11 @@ namespace Projeto_Semestral_Cantina
         }
 
         private void btnEntregarPedido_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormBalcao_Load(object sender, EventArgs e)
         {
 
         }
