@@ -44,6 +44,11 @@ namespace Projeto_Semestral_Cantina
                     FormCozinha formCozinha = new FormCozinha();
                     formCozinha.Show();
                 }
+                else if (login == "Chamada123" && senha == "1234")
+                {
+                    FormChamada formChamada = new FormChamada();
+                    formChamada.Show();
+                }
                 else
                 {
                     MessageBox.Show("Login Incorreto!");

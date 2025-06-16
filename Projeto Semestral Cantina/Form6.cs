@@ -70,5 +70,10 @@ namespace Projeto_Semestral_Cantina
         {
             this.Close();
         }
+
+        private void FormCozinha_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

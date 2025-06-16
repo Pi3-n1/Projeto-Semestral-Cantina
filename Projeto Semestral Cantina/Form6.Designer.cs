@@ -95,8 +95,6 @@
             lbOrdemPedidos.Name = "lbOrdemPedidos";
             lbOrdemPedidos.Size = new Size(214, 482);
             lbOrdemPedidos.TabIndex = 24;
-            this.btnPedidoPronto.Click += new System.EventHandler(this.btnPedidoPronto_Click);
-
             // 
             // btnPedidoPronto
             // 
@@ -109,6 +107,7 @@
             btnPedidoPronto.TabIndex = 25;
             btnPedidoPronto.Text = "Enviar pedido";
             btnPedidoPronto.UseVisualStyleBackColor = false;
+            btnPedidoPronto.Click += btnPedidoPronto_Click;
             // 
             // FormCozinha
             // 
@@ -123,6 +122,7 @@
             Name = "FormCozinha";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form6";
+            Load += FormCozinha_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel2.ResumeLayout(false);
             ResumeLayout(false);
